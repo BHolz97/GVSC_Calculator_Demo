@@ -94,17 +94,22 @@ function animateValue(start, end, duration) {
     var range = end - start;
     console.log("Range: " + range);
     var current = start;
-    var increment = end > start ? 1 : -1;
+    //var increment = end > start ? 1 : -1;
+    var increment = (end - start) / 100;
     console.log("Increment: " + increment);
     // var stepTime = Math.abs(Math.floor(duration / range));
     var stepTime = Math.abs(duration / range);
     console.log("Step time: " + stepTime);
     //var obj = document.getElementById(id);
     var timer = setInterval(function () {
-        console.log("Tik");
+        //console.log("Tik");
         current += increment;
+        if (current > end) {
+            $("#save-value").html(Math.floor(current));
+            clearInterval(timer);
+        }
         //obj.innerHTML = current;
-        $("#save-value").html(current);
+        $("#save-value").html(Math.floor(current));
         if (current == end) {
             clearInterval(timer);
         }

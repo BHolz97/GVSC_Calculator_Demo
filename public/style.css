@@ -136,6 +136,10 @@ label.light {
     margin-bottom: 50px;
 }
 
+#per-month {
+    font-size: 0.5em;
+}
+
 #TotalSave {
     margin-bottom: 2px;
 }
