@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Sign Up Form</title>
+        <link rel="stylesheet" href="calculator.css" />
+        <link
+            href="https://fonts.googleapis.com/css?family=Nunito:400,300"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <link rel="stylesheet" href="style.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+
+    <body>
+        <div class="row">
+            <div class="col-md-12">
+                <form action="index.html" method="post">
+                    <h1>Savings Calculator</h1>
+
+                    <fieldset>
+                        <legend><span class="number">1</span> Your Basic Info</legend>
+
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="user_name" />
+
+                        <label for="email">Email:</label>
+                        <input type="email" id="mail" name="user_email" />
+                    </fieldset>
+                    <fieldset class="fieldSet">
+                        <legend><span class="number">2</span> Current Expenses</legend>
+
+                        <label for="CallCost">Current Monthly Call Cost:</label>
+                        <input id="CallCost" type="number" name="MonthlyCallCost" />
+
+                        <!-- <p id="CallSave" class="Save"></p> -->
+                        <label for="EquipCost">Current Monthly Equipment Rental Cost:</label>
+                        <input id="EquipCost" type="number" name="EquipmentRentalCost" />
+                        <!-- <p class="Save" id="EquipSave"></p> -->
+
+                        <label>Current Service Provider:</label>
+                        <select id="ServiceProvider">
+                            <option>Telkom</option>
+                            <option>Other Service Provider</option>
+                        </select>
+                        <label for="LineCost">Current Monthly telephone Line rental Cost:</label>
+                        <input id="LineCost" type="number" name="LineRental Cost" />
+                        <!-- <p class="Save" id="LineSave"></p> -->
+
+                        <label for="InternetCost">Current Monthly Internet Cost:</label>
+                        <input id="InternetCost" type="number" name="InternetCost" />
+                        <!-- <p class="Save" id="InternetSave"></p> -->
+                    </fieldset>
+
+                    <p class="Save" id="TotalSave"></p>
+                    <p class="Save" id="save-value-r">R<span id="save-value"></span></p>
+                    <p></p>
+                    <button id="submit" onclick="calculateSaving()" type="button">Get Estimate</button>
+
+                    <!-- <h1 id="save-value">BEFORE TEST</h1> -->
+                </form>
+            </div>
+        </div>
+    </body>
+    <script type="text/javascript" src="index.js"></script>
+</html>
