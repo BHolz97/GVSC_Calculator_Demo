@@ -92,14 +92,14 @@ function internetCost() {
 function animateValue(start, end, duration) {
     $("#save-value-r").show();
     var range = end - start;
-    console.log("Range: " + range);
+    //console.log("Range: " + range);
     var current = start;
     //var increment = end > start ? 1 : -1;
     var increment = (end - start) / 100;
-    console.log("Increment: " + increment);
+    //console.log("Increment: " + increment);
     // var stepTime = Math.abs(Math.floor(duration / range));
     var stepTime = Math.abs(duration / range);
-    console.log("Step time: " + stepTime);
+    //console.log("Step time: " + stepTime);
     //var obj = document.getElementById(id);
     var timer = setInterval(function () {
         //console.log("Tik");
